@@ -129,7 +129,9 @@ form label.form-info {
 .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #fff;
 }
-
+.nav-item:hover{
+  background-color: #666;
+}
 .content .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,6 +410,7 @@ form label.form-info {
   transition: all 0.5s ease;
 }
 
+
 .developer-card {
   height: 400px;
   width: 100%;
@@ -633,3 +636,9 @@ form label.form-info {
   font-size: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 600px) {
+  .post-details li{
+    font-size: medium;
+  }
+}
