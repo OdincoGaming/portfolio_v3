@@ -264,7 +264,6 @@
                                         <h2 class="developer-name">Frederick Lyle</h2>
                                         <p class="developer-role">Full-Stack Developer</p>
                                         <h4 class="developer-role">dericklyle@yahoo.com</h4>
-
                                         <ul class="developer-social">
                                             <li>
                                                 <a href="https://github.com/OdincoGaming"><i class="fab fa-github"></i></a>
@@ -328,7 +327,6 @@
         $(window).scroll(function () {
             $('nav').toggleClass('scrolled', $(this).scrollTop() > 125)
         });
-
         var firebaseConfig = {
         apiKey: "AIzaSyBXdpXxUkz5IsRuUvQ3J9tJDxDd1Mn34Ks",
         authDomain: "portfolio-newsletter.firebaseapp.com",
@@ -341,16 +339,10 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     var database = firebase.database();
-
     $("#newsletterButton").on("click", function(event) {
         // Don't refresh the page!
         event.preventDefault();
-
-        // YOUR TASK!!!
-        // Code in the logic for storing and retrieving the most recent user.
-        // Don't forget to provide initial data to your Firebase database.
         email = $("#newsletterEmail").val().trim();
-
         if(email != ""){
             database.ref().push({
                 email: email,
@@ -359,7 +351,6 @@
         alert("Thanks!");
         $("#newsletterEmail").val(""); 
     });
-
     </script>
 </body>
 
